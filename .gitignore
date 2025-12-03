@@ -24,6 +24,3 @@ dist-ssr
 
 # Server build
 dist-server
-
-# Config with API keys
-config/config.ts

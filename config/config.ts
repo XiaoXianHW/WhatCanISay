@@ -1,3 +1,7 @@
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 export const publicConfig = {
   app: {
     title: 'What Can I Say?',
@@ -10,14 +14,11 @@ export const publicConfig = {
     defaultMode: 'dark' as const,
     primaryColor: '#2563eb',
   },
-  api: {
-    backendUrl: process.env.VITE_API_URL || 'http://localhost:3001',
-  },
 }
 
 export const serverConfig = {
   server: {
-    port: 3001,
+    port: parseInt(process.env.SERVER_PORT || '3001', 10),
     allowedOrigins: [
       'http://localhost:5173',
       'http://127.0.0.1:5173',
@@ -28,10 +29,10 @@ export const serverConfig = {
     rateLimitMaxRequests: 10,
   },
   ai: {
-    apiKey: 'your-api-key-here',
-    endpoint: 'https://api.deepseek.com/v1/chat/completions',
-    model: 'deepseek-chat',
-    temperature: 0.8,
+    apiKey: process.env.AI_API_KEY || 'your-api-key-here',
+    endpoint: process.env.AI_ENDPOINT || 'https://api.deepseek.com/v1/chat/completions',
+    model: process.env.AI_MODEL || 'deepseek-chat',
+    temperature: parseFloat(process.env.AI_TEMPERATURE || '0.8'),
   },
 }
 
