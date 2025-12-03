@@ -15,10 +15,22 @@ export const titles: Title[] = [
     ],
   },
   {
+    name: '莽夫战士',
+    description: '你是真实，但也是真莽。说话不过脑，怼天怼地怼空气，活在自己的世界里横冲直撞。',
+    condition: (evaluation) => 
+      evaluation.toxic >= 50 && evaluation.npcEnergy >= 60 && evaluation.rizz < 50,
+    advice: [
+      '真实是好事，但也要考虑场合',
+      '降低攻击性，学会温和表达',
+      '多思考对方的感受',
+      '情商和个性可以并存',
+    ],
+  },
+  {
     name: '出厂设置NPC',
     description: '你的回答像极了早期的Siri，毫无感情，全是技巧。建议重新刷机，你的聊天记录比白开水还淡。',
     condition: (evaluation) => 
-      evaluation.npcEnergy >= 70,
+      evaluation.npcEnergy >= 70 && evaluation.toxic < 40 && evaluation.abstract < 50,
     advice: [
       '尝试在回答中加入更多个人情感',
       '不要总是给出"标准答案"',
@@ -30,7 +42,7 @@ export const titles: Title[] = [
     name: '话题终结者',
     description: '只要你一开口，群聊就变成了停尸房。沉默是金，对你来说是真的。',
     condition: (evaluation) => 
-      evaluation.npcEnergy >= 55 && evaluation.rizz < 40,
+      evaluation.npcEnergy >= 60 && evaluation.rizz < 35 && evaluation.abstract < 40,
     advice: [
       '多观察社交场景中的气氛',
       '学习一些基本的社交话术',
@@ -76,11 +88,23 @@ export const titles: Title[] = [
     name: '抽象大帝',
     description: '正常人听不懂你在说什么，但你的同类会奉你为神。你的大脑回路像那个旋转的直升机一样难以捉摸。',
     condition: (evaluation) => 
-      evaluation.abstract >= 75 && evaluation.rizz < 55,
+      evaluation.abstract >= 70 && evaluation.rizz < 55,
     advice: [
       '考虑一下受众，不是所有人都懂梗',
       '在正式场合收敛一下抽象程度',
       '保持个性很好，但也要学会切换模式',
+    ],
+  },
+  {
+    name: '网络浪人',
+    description: '半懂不懂的抽象，时而温柔时而暴躁。在网上冲浪很溜，但线下社交还需修炼。',
+    condition: (evaluation) => 
+      evaluation.abstract >= 60 && evaluation.npcEnergy >= 60 && evaluation.rizz < 50,
+    advice: [
+      '你有一定的网感，继续提升',
+      '降低模板化回答，多点真实表达',
+      '控制情绪，减少攻击性',
+      '线上线下社交要有所区别',
     ],
   },
   {
