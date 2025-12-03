@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ES2020",
+    "lib": ["ES2020"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "outDir": "dist-server",
+    "rootDir": ".",
+    "types": ["node"]
+  },
+  "include": ["src/server.ts", "src/utils/**/*", "config/config.ts"],
+  "exclude": ["node_modules", "dist", "src/main.tsx", "src/App.tsx", "src/pages", "src/components", "src/stores", "src/services", "src/data", "src/types", "src/styles", "config/public.config.ts"]
+}

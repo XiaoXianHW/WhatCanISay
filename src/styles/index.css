@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  body {
+    @apply bg-gray-50 dark:bg-neutral-900;
+    @apply text-gray-900 dark:text-gray-50;
+    @apply font-sans antialiased;
+    @apply transition-colors duration-200;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2.5 font-medium;
+    @apply bg-blue-600 dark:bg-blue-500;
+    @apply text-white;
+    @apply rounded-lg;
+    @apply transition-all duration-200;
+    @apply hover:bg-blue-700 dark:hover:bg-blue-600;
+    @apply active:scale-95;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2.5 font-medium;
+    @apply bg-white dark:bg-neutral-800;
+    @apply text-gray-900 dark:text-gray-100;
+    @apply border border-gray-300 dark:border-neutral-700;
+    @apply rounded-lg;
+    @apply transition-all duration-200;
+    @apply hover:bg-gray-50 dark:hover:bg-neutral-700;
+  }
+
+  .card {
+    @apply bg-white dark:bg-neutral-800;
+    @apply border border-gray-200 dark:border-neutral-700;
+    @apply rounded-2xl;
+    @apply shadow-sm;
+    @apply transition-colors duration-200;
+  }
+
+  .chat-app-header {
+    @apply bg-white dark:bg-neutral-800;
+    @apply border-b border-gray-200 dark:border-neutral-700;
+    @apply px-4 py-3;
+  }
+
+  .chat-bubble {
+    @apply px-4 py-2.5 rounded-2xl;
+    @apply shadow-sm;
+    @apply transition-all duration-200;
+    @apply inline-block;
+    max-width: fit-content;
+  }
+
+  .chat-bubble-received {
+    @apply bg-gray-100 dark:bg-neutral-700;
+    @apply text-gray-900 dark:text-gray-50;
+    @apply rounded-tl-md;
+  }
+
+  .chat-bubble-sent {
+    @apply bg-blue-600 dark:bg-blue-500;
+    @apply text-white;
+    @apply rounded-tr-md;
+  }
+}
+
+@layer utilities {
+  .border-line {
+    @apply border-gray-200 dark:border-neutral-700;
+  }
+
+  .text-secondary {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+
+  .text-tertiary {
+    @apply text-gray-500 dark:text-gray-500;
+  }
+
+  .bg-secondary {
+    @apply bg-gray-100 dark:bg-neutral-800;
+  }
+
+  .hover-bg {
+    @apply hover:bg-gray-50 dark:hover:bg-neutral-800;
+  }
+
+  .chat-input {
+    @apply bg-gray-100 dark:bg-neutral-700;
+    @apply border-0 rounded-2xl;
+    @apply px-4;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500;
+    @apply transition-all duration-200;
+    @apply leading-normal;
+    height: 52px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
