@@ -37,15 +37,6 @@ export default function Navbar() {
           </Link>
 
           <div className="flex items-center gap-3">
-            {!isHomePage && (
-              <Link
-                to="/"
-                className="text-sm font-medium text-secondary hover:text-black dark:hover:text-white transition-colors"
-              >
-                首页
-              </Link>
-            )}
-
             <button
               onClick={toggleTheme}
               className="p-2 hover-bg rounded-md transition-colors"

@@ -8,7 +8,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/XiaoXianHW/WhatCanISay"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-black dark:hover:text-white transition-colors flex items-center gap-1"
