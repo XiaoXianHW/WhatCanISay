@@ -7,7 +7,7 @@
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:client": "vite",
     "dev:server": "tsx watch src/server.ts",
-    "build": "vite build && tsc -p tsconfig.server.json && xcopy dist dist-server\\dist /E /I /Y",
+    "build": "vite build && tsc -p tsconfig.server.json && cpy dist/**/* dist-server/dist",
     "start": "node dist-server/src/server.js --production",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
@@ -35,6 +35,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.2",
+    "cpy-cli": "^5.0.0",
     "tsx": "^4.7.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
